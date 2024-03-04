@@ -1,18 +1,37 @@
+import { useSelector } from "react-redux";
+import { Route, Routes } from "react-router-dom";
 
-import { useSelector } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
-
-import { Searchbar, Sidebar, MusicPlayer, TopPlay } from './components';
-import { ArtistDetails, TopArtists, AroundYou, Discover, Search, SongDetails, TopCharts } from './pages';
+import { Searchbar, Sidebar, MusicPlayer, TopPlay } from "./components";
+import {
+  ArtistDetails,
+  TopArtists,
+  AroundYou,
+  Discover,
+  Search,
+  SongDetails,
+  TopCharts,
+} from "./pages";
+import { useEffect, useState } from "react";
 
 const App = () => {
+  const [user, setUser] = useState([]);
   const { activeSong } = useSelector((state) => state.player);
+
+  useEffect(() => {
+    fetch("/api/users")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setUser(data);
+      });
+  }, []);
 
   return (
     <div className="relative flex">
+      {user.map((user)=><div key={user.id}>{user.name}{user.id}</div>)}
       <Sidebar />
       <div className="flex-1 flex flex-col bg-gradient-to-br from-black to-[#121286]">
-        <Searchbar />
+      <Searchbar />
 
         <div className="px-6 h-[calc(100vh-72px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse">
           <div className="flex-1 h-fit pb-40">
