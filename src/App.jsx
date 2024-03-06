@@ -11,24 +11,16 @@ import {
   SongDetails,
   TopCharts,
 } from "./pages";
-import { useEffect, useState } from "react";
+
 
 const App = () => {
-  const [user, setUser] = useState([]);
+
   const { activeSong } = useSelector((state) => state.player);
 
-  useEffect(() => {
-    fetch("/api/users")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setUser(data);
-      });
-  }, []);
-
+  
   return (
     <div className="relative flex">
-      {user.map((user)=><div key={user.id}>{user.name}{user.id}</div>)}
+   
       <Sidebar />
       <div className="flex-1 flex flex-col bg-gradient-to-br from-black to-[#121286]">
       <Searchbar />
