@@ -4,11 +4,13 @@ import {createApi , fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 //   .then((response) => response.json())
 //   .then((response) => console.log(response));
 
+  const BASE_URL = 'http://localhost:5173/';
+
   export const shazamCoreApi = createApi({
     reducerPath : 'shazamCoreApi',
     baseQuery : fetchBaseQuery({
         method:"GET",
-        baseUrl:'http://localhost:5174/',
+        baseUrl:BASE_URL,
         prepareHeaders:(headers)=>{
             headers.get('content-type','application/json')
         return headers;

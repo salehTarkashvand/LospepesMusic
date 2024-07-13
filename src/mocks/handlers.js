@@ -2,10 +2,8 @@ import { http, HttpResponse } from 'msw';
  
 export const handlers = [
   http.get('/api/charts', (resolver) => {
-    return HttpResponse.json([
-      {
-        "properties": {},
-        "tracks": [
+    return HttpResponse.json(
+         [
             {
                 "layout": "5",
                 "type": "MUSIC",
@@ -1645,7 +1643,6 @@ export const handlers = [
                 "properties": {}
             }
         ]
-    }
-    ])
+    )
   }),
 ]
