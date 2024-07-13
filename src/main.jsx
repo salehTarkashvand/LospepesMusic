@@ -9,7 +9,9 @@ import { store } from './redux/store';
 
 async function deferRender (){
   const {worker} = await import('./mocks/browser')
-  return worker.start()
+  return worker.start({
+    onUnhandledRequest: 'bypass',
+});
 }
 deferRender().then(()=>{
   ReactDOM.createRoot(document.getElementById('root')).render(
