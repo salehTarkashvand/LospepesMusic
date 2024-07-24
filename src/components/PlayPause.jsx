@@ -3,13 +3,13 @@ import { FaPauseCircle, FaPlayCircle } from "react-icons/fa";
 const PlayPause = ({ activeSong, isPlaying, handlePause, handlePlay, title ,}) =>
   isPlaying && activeSong?.title === title ? (
     <FaPauseCircle 
-    size={50}
-    className="text-gray-300"
+    size={70}
+    className="text-gray-100"
     onClick={handlePause}/>
   ) : (
     <FaPlayCircle 
-    size={50}
-    className="text-gray-300"
+    size={70}
+    className="text-gray-100"
     onClick={handlePlay}/>
   );
 
