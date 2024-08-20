@@ -1,5 +1,17 @@
 # Security Policy
 
+This project is developed by Saleh Tarkashvand. For any questions or to report security issues, please contact:
+- **Email:** saleh.tarkashvand@gmail.com
+
+## Copyright Protection Methods
+
+1. **Use Appropriate Licensing:** Use open-source licenses like MIT, GPL, or Apache to clearly define the rights and restrictions of your code.
+2. **Add Copyright Notices:** Include a copyright notice at the top of each code file.
+3. **Use Copyright Detection Tools:** Utilize tools like GitHub’s DMCA Takedown or Google’s Copyright Removal to identify and remove unauthorized copies.
+4. **Legal Action:** If necessary, consult legal advisors to pursue copyright infringement cases.
+
+
+
 ## Supported Versions
 
 Use this section to tell people about which versions of your project are
