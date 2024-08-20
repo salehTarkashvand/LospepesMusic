@@ -2,10 +2,6 @@
 
 LospepesMusic is a music streaming application developed using React and Redux. This project includes various features such as state management with Redux, API simulation with MSW, styling with Tailwind CSS, and HTTP requests with Axios.
 
-## Screenshots
-
-!Home Page
-!Music Player
 
 ## Features
 
