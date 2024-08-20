@@ -15,7 +15,7 @@ LospepesMusic is a music streaming application developed using React and Redux. 
 
 To install and set up the project, follow these steps:
 
-### Clone the repository:
+## Clone the repository:
     
     git clone https://github.com/salehTarkashvand/LospepesMusic.git
     cd LospepesMusic
@@ -25,7 +25,6 @@ To install and set up the project, follow these steps:
     ```bash
     npm install
     ```
-
 2. Start the project:
     ```bash
     npm start
